@@ -1,7 +1,31 @@
-/* .App {
-  text-align: center;
+
+.errMsg{
+  background-color: #e57373;
+  margin-top: 3px;
+  padding: 4px;
 }
 
-.ulClass{
-  list-style-type:none;
-} */
+.formGroup{
+  padding-bottom: 2px;
+  /* padding-top: 3px; */
+}
+
+.selectGroup{
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.formDiv{
+  border-radius: 12px 12px;
+  align-content: center;
+  background-color: rgb(151, 202, 204);
+  margin-top: 70px;
+  padding:8px
+}
+.checkBoxDiv{
+  margin-bottom: 10px;
+}
+
+.buttonDiv{
+  margin-top: 8px;
+  margin-bottom: 12px;
+}

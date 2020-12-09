@@ -10,7 +10,9 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Content from './content';
 import manageContext from './../context-api/manageContext';
-
+// react-toastify
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -44,18 +46,32 @@ const TodoList = (props) => {
   const handleSubmit = (e) => {
     // console.log('handleSubmit---->>')
     e.preventDefault();
-
-    // console.log('handleSubmit_inputField---->>', inputField)
+    let validText = inputField.trim();
+    if(validText){
+      // console.log('handleSubmit_inputField---->>', inputField)
     if (!isEdit) {
-    // console.log('if_isEdit---->>', isEdit)
-       props.addTodo(inputField);
+      // console.log('if_isEdit---->>', isEdit)
+         props.addTodo(inputField);
+      }
+      else {
+      // console.log('else_isEdit---->>', isEdit)
+        props.updateTodo(inputField, selectedTodo)
+        setisEdit(false)
+      }
+      setInputField('');
     }
-    else {
-    // console.log('else_isEdit---->>', isEdit)
-      props.updateTodo(inputField, selectedTodo)
-      setisEdit(false)
+    else{
+      toast.error('Please enter some text', {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
-    setInputField('');
+    
 
   }
 
@@ -70,13 +86,12 @@ const TodoList = (props) => {
   return ( 
 
     <Grid container spacing={3} className={classes.root}>
-       
         <Grid item  xs={3}/>
         <Grid item xs={6}>
           
         <div className={classes.content}>
           <div>
-            <Typography variant="h3"> Todo List</Typography>
+            <Typography variant="h3" gutterBottom> Todo List</Typography>
               <Input placeholder="Add task here"
                 onChange={handleChange}
                 value={inputField || ''}
@@ -99,7 +114,7 @@ const TodoList = (props) => {
         
         </Grid>
         <Grid item  xs={3}/>
-      </Grid>
+    </Grid>
  );
 }
 

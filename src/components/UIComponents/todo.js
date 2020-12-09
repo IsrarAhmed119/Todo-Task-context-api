@@ -6,7 +6,10 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from "react-bootstrap/Modal";
-import "bootstrap/dist/css/bootstrap.min.css";
+import Badge from "react-bootstrap/Badge";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +34,7 @@ const Todo = ( props) => {
 
 
   const handleDelete = () => {
-    console.log('handleChange---->>')
+    // console.log('handleDelete---->>')
     props.deleteTodo(props.todo.id)
     handleCloseModal()
     
@@ -39,16 +42,18 @@ const Todo = ( props) => {
 
 
     return ( 
-        <div>
-               <li className={classes.root}>
-                {/* <span className="badge badge-secondary m-2">
+        <>
+          <Container>
+            <Row>
+              <Col><li className={classes.root}>
+               <Badge pill variant="secondary" style={{marginRight:'10px'}}>
                     {props.todo.id}    
-                </span> */}
-            <Typography variant="h6" display='inline' gutterBottom>
+                </Badge>
+               <Typography variant="h6" display='inline' gutterBottom>
                  {props.todo.title}
             </Typography>
 
-            <Button
+               <Button
                 disabled={props.todo.completed}
                 variant="contained" color="primary"
                 onClick={() => props.readyTodo(props.todo.id)}
@@ -56,8 +61,8 @@ const Todo = ( props) => {
             >
                 Mark Ready
             </Button>
-
-            <Button
+            
+               <Button
                 disabled={props.todo.completed}
                 variant="contained" color="primary"
                 onClick={props.clickEdit}
@@ -66,7 +71,7 @@ const Todo = ( props) => {
                 Edit Todo
             </Button>
     
-            <Button
+               <Button
                 variant="contained"
                 color="secondary"
                 startIcon={<DeleteIcon />}
@@ -76,9 +81,11 @@ const Todo = ( props) => {
             >
                 Delete
                 </Button>
-            </li>
-
-          <Modal show={show} onHide={handleCloseModal}>
+            </li></Col>
+            </Row>
+            
+          </Container>
+          <Modal show={show}  backdrop="static" onHide={handleCloseModal}>
             <Modal.Header closeButton>
                 <Modal.Title>
                     <Typography variant="h6" gutterBottom>
@@ -107,9 +114,7 @@ const Todo = ( props) => {
             </Modal.Footer>
           </Modal>
      
-        </div>
-
-     
+        </>
         );
 }
 
