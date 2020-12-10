@@ -57,9 +57,11 @@ const TestForm = () => {
                   )
                   .required("Required"),
               })}
-              onSubmit={(values) => {
+              onSubmit={(values,  {  resetForm  }) => {
                 console.log("onSubmit------>>", values);
+                resetForm();
               }}
+              
             >
               <Form>
                 <MyTextInput

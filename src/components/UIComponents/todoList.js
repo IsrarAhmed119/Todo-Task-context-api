@@ -49,14 +49,13 @@ const TodoList = (props) => {
     let validText = inputField.trim();
     if(validText){
       // console.log('handleSubmit_inputField---->>', inputField)
-    if (!isEdit) {
-      // console.log('if_isEdit---->>', isEdit)
-         props.addTodo(inputField);
-      }
-      else {
-      // console.log('else_isEdit---->>', isEdit)
-        props.updateTodo(inputField, selectedTodo)
-        setisEdit(false)
+      if (!isEdit) {
+        // console.log('if_isEdit---->>', isEdit)
+        props.addTodo(inputField);
+      } else {
+        // console.log('else_isEdit---->>', isEdit)
+        props.updateTodo(inputField, selectedTodo);
+        setisEdit(false);
       }
       setInputField('');
     }
