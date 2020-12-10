@@ -7,6 +7,7 @@ import TodoList from "./components/UIComponents/todoList";
 import NavBar from "./components/UIComponents/navBar";
 import NotFound from './components/UIComponents/notFound';
 import TestForm from './components/UIComponents/testForm';
+import Charts from "./components/UIComponents/Charts";
 
 
 
@@ -19,8 +20,9 @@ function App() {
 
       <Switch>
         <Route path="/testform" component={TestForm} />
+        <Route path="/chart" component={Charts} />
         <Route path="/home" component={TodoList} />
-  
+
         <Redirect from="/" exact to="/home" />
         <Route path="/not-found" component={NotFound} />
         <Redirect to="/not-found" />
