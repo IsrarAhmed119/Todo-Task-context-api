@@ -8,6 +8,9 @@ import NavBar from "./components/UIComponents/navBar";
 import NotFound from './components/UIComponents/notFound';
 import TestForm from './components/UIComponents/testForm';
 import Charts from "./components/UIComponents/Charts";
+import Tables from "./components/UIComponents/Tables";
+import MultilevelDropdown from "./components/UIComponents/MutlilevelDropDown";
+import DropDown from "./components/UIComponents/MaterialTable/DropDown";
 
 
 
@@ -20,7 +23,10 @@ function App() {
 
       <Switch>
         <Route path="/testform" component={TestForm} />
+        <Route path="/testdropdown" component={DropDown} />
+        <Route path="/dropdown" component={MultilevelDropdown} />
         <Route path="/chart" component={Charts} />
+        <Route path="/tables" component={Tables} />
         <Route path="/home" component={TodoList} />
 
         <Redirect from="/" exact to="/home" />
