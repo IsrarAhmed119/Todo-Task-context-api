@@ -25,19 +25,19 @@ const DropDown = () => {
     <div>
       <h1>DropDown--------Compo--</h1>
       <div className="DropdwonDiv">
-        <label>Choose job type:</label>
-
-        <select>
-          {data[index].jobs.map((item, i) => {
-            return <option key={i}>{item}</option>;
-          })}
-        </select>
-
         <label>Choose a company:</label>
 
         <select onChange={handleChange}>
           {data.map((item, i) => {
             return <option key={i}>{item.name}</option>;
+          })}
+        </select>
+        
+        <label>Choose job type:</label>
+
+        <select>
+          {data[index].jobs.map((item, i) => {
+            return <option key={i}>{item}</option>;
           })}
         </select>
       </div>
