@@ -25,7 +25,7 @@ const DropDown = () => {
     <div>
       <h1>DropDown--------Compo--</h1>
       <div className="DropdwonDiv">
-        <label>Choose a company:</label>
+        <label>Choose one option:</label>
 
         <select onChange={handleChange}>
           {data.map((item, i) => {
