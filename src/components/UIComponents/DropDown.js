@@ -33,7 +33,7 @@ const DropDown = () => {
           })}
         </select>
 
-        <label>Choose job type:</label>
+        <label>Choose type:</label>
 
         <select>
           {data[index].type.map((item, i) => {
