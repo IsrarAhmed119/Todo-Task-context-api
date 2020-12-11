@@ -25,7 +25,7 @@ const DropDown = () => {
     <div>
       <h1>DropDown--------Compo--</h1>
       <div className="DropdwonDiv">
-        <label>Choose a pet:</label>
+        <label>Choose job type:</label>
 
         <select>
           {data[index].jobs.map((item, i) => {
