@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 const DropDown = () => {
   const data = [
-    { name: "company1", jobs: ["job1-1", "job1-2", "job1-3"] },
-    { name: "company2", jobs: ["job2-1", "job2-2", "job2-3"] },
-    { name: "company3", jobs: ["job3-1", "job3-2", "job3-3"] },
+    { name: "House", type: ["1-kanal", "2-kanal", "Farm-house"] },
+    { name: "Car", type: ["BMW", "Audi", "Ford"] },
+    { name: "Shoes", type: ["adidas", "Under Armour", "Bared Footwear"] },
   ];
 
   const [index, setindex] = useState(0);
@@ -32,11 +32,11 @@ const DropDown = () => {
             return <option key={i}>{item.name}</option>;
           })}
         </select>
-        
+
         <label>Choose job type:</label>
 
         <select>
-          {data[index].jobs.map((item, i) => {
+          {data[index].type.map((item, i) => {
             return <option key={i}>{item}</option>;
           })}
         </select>
