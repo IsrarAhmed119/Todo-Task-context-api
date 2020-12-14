@@ -13,26 +13,15 @@ const NavBar = () => {
           <Nav.Link href="testform">Test-Form</Nav.Link>
           <Nav.Link href="chart">Charts</Nav.Link>
           <Nav.Link href="tables">Tables</Nav.Link>
+          <Nav.Link href="selectDropdown">Select Dropdown</Nav.Link>
+          <Nav.Link href="dynamicNav">Dynamic Nav</Nav.Link>
+          <Nav.Link href="uploadFile">UploadFile</Nav.Link>
           <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
             <NavDropdown.Item href="">Test-Form</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">
               Another action
             </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">
-              <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="">Test-Form</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
-            </NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.3"></NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action/3.4">
               Separated link

@@ -60,8 +60,8 @@ const TodoList = (props) => {
       setInputField('');
     }
     else{
-      toast.error('Please enter some text', {
-        position: "bottom-center",
+      toast.error("Please enter some text", {
+        position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,

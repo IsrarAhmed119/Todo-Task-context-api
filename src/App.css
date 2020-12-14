@@ -48,3 +48,10 @@ html {
   margin-top: 100px;
   padding:50px
 }
+
+.mainDiv{
+   border: 5px solid black;
+  /* margin-top: 100px; */
+  /* margin-bottom: 100px; */
+  padding:50px
+}

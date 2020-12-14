@@ -11,6 +11,7 @@ import Charts from "./components/UIComponents/Charts";
 import Tables from "./components/UIComponents/Tables";
 import MultilevelDropdown from "./components/UIComponents/MutlilevelDropDown";
 import DropDown from "./components/UIComponents/DropDown";
+import UploadFile from "./components/UIComponents/uploadFile";
 
 
 
@@ -23,8 +24,9 @@ function App() {
 
       <Switch>
         <Route path="/testform" component={TestForm} />
-        <Route path="/testdropdown" component={DropDown} />
-        <Route path="/dropdown" component={MultilevelDropdown} />
+        <Route path="/selectDropdown" component={DropDown} />
+        <Route path="/uploadFile" component={UploadFile} />
+        <Route path="/dynamicNav" component={MultilevelDropdown} />
         <Route path="/chart" component={Charts} />
         <Route path="/tables" component={Tables} />
         <Route path="/home" component={TodoList} />
