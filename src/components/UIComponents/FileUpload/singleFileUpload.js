@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from "react";
+
+
+import { uploadImage } from "../../Services/userServices";
+
 const SingleFileUpload = () => {
   const [selectedFile, setselectedFile] = useState();
 
@@ -9,7 +13,7 @@ const SingleFileUpload = () => {
   };
 
   // On file upload (click the upload button)
-  const onFileUpload = () => {
+  const onFileUpload = async () => {
     // Create an object of formData
     const formData = new FormData();
 
@@ -23,6 +27,8 @@ const SingleFileUpload = () => {
     // Request made to the backend api
     // Send formData object
     // axios.post("api/uploadfile", formData);
+
+    const res = await uploadImage(formData);
   };
 
   // File content to be displayed after

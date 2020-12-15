@@ -16,6 +16,7 @@ const NavBar = () => {
           <Nav.Link href="selectDropdown">Select Dropdown</Nav.Link>
           <Nav.Link href="dynamicNav">Dynamic Nav</Nav.Link>
           <Nav.Link href="uploadFile">UploadFile</Nav.Link>
+          <Nav.Link href="userInfo">UserInfo</Nav.Link>
           <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
             <NavDropdown.Item href="">Test-Form</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">
